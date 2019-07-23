@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    h1 This is a WISE-PaaS Single-Sign-On Example
+    hr
+    h5 Click to try!
+    br
+    - const ssoUri = 'https://portal-sso.wise-paas.io';
+    - const redirectUriAfterLogin = 'https://sso-demo-js.wise-paas.io';
+    - const redirectUriAfterLogout = 'https://sso-demo-js.wise-paas.io';
+
+    a.btn.btn-primary.login(href = ssoUri+'/web/signIn.html?redirectUri='+redirectUriAfterLogin) Login
+    |       
+    a.btn.btn-secondary.logout(href = ssoUri+'/web/signOut.html?redirectUri='+redirectUriAfterLogout) Logout
+    |       
+    a.btn.btn-info.check-status(href = "#") Check Status
+
+    br
+    br
+
+    h3 Welcome to Advantech 
+    br
+    center
+        iframe(type='text/html' width='960' height='540' src='https://www.youtube.com/embed/ZnW-zVO9OYA?enablejsapi=1' frameborder='0')

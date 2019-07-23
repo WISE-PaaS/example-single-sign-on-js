@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        title SSO Single Sign On Example
+        link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet' href='/css/style.css')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    body
+        nav.navbar.navbar-expand-md.navbar-dark.bg-dark
+            - var url = 'https://www.advantech.tw/embedded-boards-design-in-services/wisepaas'
+            a.navbar-brand(href = url) WISE-PaaS
+            #navbar.collapse.navbar-collapse
+                ul.navbar-nav.mr-auto
+                    li.nav-item.active
+                        a.nav-link(href='/') Home
+    
+    .container
+        br
+        block content
+        br
+        hr
+        footer
+        p Copyright &copy; 2019
+    script(src='/bower_components/jquery/dist/jquery.js')
+    script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
+    script(src='/js/main.js')
