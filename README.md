@@ -12,7 +12,7 @@ See more [NodeJS Express from scratch](https://www.youtube.com/watch?v=lAUncPg_F
 
 ## What is Single Sign On (SSO)?
 
-Single sign on is a property of access control that you may sign on with one account to several independent software systems.
+SSO is a property of access control that you may sign on with one account to several independent software systems.
 
 For example, you may have only one Google account, but have access Gmail, Google Drive, YouTube... on one sign on process.
 
