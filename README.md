@@ -29,3 +29,48 @@ STEP2 Push your service
     cf push
 
 ## Code description
+
+```js
+const express = require('express');
+const path = require('path');
+
+// init app
+const app = express();
+
+//load view engine
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine','pug');
+
+app.use(express.json());
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+//new home page
+app.get('/', function(req,res){
+    res.render('home_index');
+})
+
+const port = process.env.PORT || 3030;
+app.listen(port, function() {
+    console.log(`Listening on port ${port}...`);
+});
+```
+
+The main code here does nothing special, it basically make some basic setups and starts listening.
+
+```js
+$('.check-status').on('click', function () {
+    $.ajax({
+        url : 'https://portal-sso.wise-paas.io/v2.0/users/me',
+        xhrFields : {
+            withCredentials: true
+        }
+    }).done(function (user) {
+        alert('Hello! ' + user.firstName + ' ' + user.lastName+ ' ' + user.country);
+    }).fail(function () {
+        alert('You are not logged in!');
+    });
+});
+```
+
+This **main.js** is the most important part of this SSO project. After signing in to any service of WISE-PaaS, we get a token. With this token, we are able to use all the services which is binded to the user on single sign on. Therefore, we need to get the token information. We use the REST API provided by WISE-PaaS: **`GET`**, base URL + **`/v2.0/users/me`**. See more information [WISE-PaaS SSO API](https://portal-technical.wise-paas.io/doc/api-document-portal.html#SSO-2)
