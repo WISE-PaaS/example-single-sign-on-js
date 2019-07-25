@@ -6,7 +6,20 @@ An example to deploy a single-sign-on app
 
 1. This example uses PUG as the view engine, remember to intall pug **`npm install pug --save`** in the folder.
 
-2. Remember to install bower **`npm install -g bower`** and install bootstrap **`bower install bootstrap`**, otherwise you won't have dependencies to **jQuery** and the frontend page is going to look ugly.
+2. Remember to install bower **`npm install -g bower`**. 
+
+Add a **`.bowerrc`** in the folder, then type down 
+
+```
+{
+    "directory":"public/bower_components"
+}
+```
+
+So that the bootstrap file then installed would we under the public folder.
+
+Then, install bootstrap **`bower install bootstrap`**, otherwise you won't have dependencies to **jQuery** and the frontend page is going to look ugly.
+
 
 See more [NodeJS Express from scratch](https://www.youtube.com/watch?v=lAUncPg_FVw)
 
