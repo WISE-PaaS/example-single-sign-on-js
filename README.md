@@ -73,4 +73,8 @@ $('.check-status').on('click', function () {
 });
 ```
 
-This **main.js** is the most important part of this SSO project. After signing in to any service of WISE-PaaS, we get a token. With this token, we are able to use all the services which is binded to the user on single sign on. Therefore, we need to get the token information. We use the REST API provided by WISE-PaaS: **`GET`**, base URL + **`/v2.0/users/me`**. See more information [WISE-PaaS SSO API](https://portal-technical.wise-paas.io/doc/api-document-portal.html#SSO-2)
+This **main.js** is the most important part of this SSO project. After signing in to any service of WISE-PaaS, we get a token. With this token, we are able to use all the services which is binded to the user on single sign on. Therefore, we need to get the token information. 
+
+We use the REST API provided by WISE-PaaS: **`GET`**, base URL + **`/v2.0/users/me`**. 
+
+See more information [WISE-PaaS SSO API](https://portal-technical.wise-paas.io/doc/api-document-portal.html#SSO-2)
