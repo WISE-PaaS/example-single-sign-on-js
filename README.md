@@ -35,6 +35,10 @@ SSO allows users to have only one account but can access to multiple services. T
 
 STEP1 Install node modules
 
+    npm install
+    
+If your still miss other dependencies, type down:
+
     npm install --save {moduleName}
     
 STEP2 Push your service
